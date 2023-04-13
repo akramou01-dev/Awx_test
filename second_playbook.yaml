@@ -6,8 +6,8 @@
   
   tasks: 
   - name: executing simple ls 
-      shell: "ls -lrt" 
-      register : "output"
+    shell: "ls -lrt" 
+    register : "output"
   - debug: var=output.stdout_lines
   - name: creating dir 
     file: 
@@ -17,13 +17,13 @@
       group: cloud
       owner: cloud
   - name: creating file in new dir 
-      file: 
-        path: /home/cloud/test_dir/hello-world.py 
-        state: present 
-        group: cloud
-        owner: cloud
+    file: 
+      path: /home/cloud/test_dir/hello-world.py 
+      state: present 
+      group: cloud
+      owner: cloud
   - name: installing apache
-      apt: 
-        name: apache2 
-        state: present    
+    apt: 
+      name: apache2 
+      state: present    
         
