@@ -12,7 +12,7 @@
     - name: create new file 
       file: 
         path: .
-        state: present
+        state: touch
         mode: 755
     - name: installing Apache2
       apt: 
