@@ -8,7 +8,7 @@
   - name: executing simple ls 
     shell: "ls -lrt" 
     register : "output"
-  - debug: var=output.stdout_lines
+#   - debug: var=output.stdout_lines
   - name: creating dir 
     file: 
       path: /home/cloud/test_dir
