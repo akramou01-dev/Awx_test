@@ -4,18 +4,18 @@
     connection: local
     become: yes
     tasks:
-#     - name: create file using the shell 
-#       shell: "touch test.txt"
+    - name: create file using the shell 
+      shell: "touch test.txt"
       
     - name: execute ls command 
       shell: "ls -l"
       register: "output" 
       
-    - name: create new file 
-      file: 
-        path: /home/test_dir
-        state: touch
-        mode: 755
+#     - name: create new file 
+#       file: 
+#         path: /home/test_dir
+#         state: touch
+#         mode: 755
 #     - name: installing Apache2
 #       apt: 
 #         name: apache2
