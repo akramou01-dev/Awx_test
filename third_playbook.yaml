@@ -2,6 +2,7 @@
   - name: "Playing with Ansible."
     hosts: localhost
     connection: local
+    become: yes
     tasks:
 #     - name: create file using the shell 
 #       shell: "touch test.txt"
