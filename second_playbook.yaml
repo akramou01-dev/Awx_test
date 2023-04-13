@@ -1,0 +1,24 @@
+---
+
+- name: second playbook 
+  hosts: all 
+  become: true 
+  
+  tasks: 
+  - name: creating dir 
+    file: 
+      path: /home/cloud/test_dir
+      state: directory
+      createhome: yes
+      group: cloud
+      owner: cloud
+  - name: creating file in new dir 
+      file: 
+        path: /home/cloud/test_dir/hello-world.py 
+        state: present 
+        group: cloud
+        owner: cloud
+  - name: installing apache
+      apt: 
+        name: apache2 
+        state: present    
