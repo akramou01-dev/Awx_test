@@ -10,13 +10,13 @@
       shell: "ls -l"
       register: "output" 
       
-    - name: create new file 
-      file: 
-        path: .
-        state: touch
-        mode: 755
-    - name: installing Apache2
-      apt: 
-        name: apache2
-        state: present
+#     - name: create new file 
+#       file: 
+#         path: .
+#         state: touch
+#         mode: 755
+#     - name: installing Apache2
+#       apt: 
+#         name: apache2
+#         state: present
     - debug: var=output.stdout_lines
