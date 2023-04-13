@@ -1,0 +1,9 @@
+--- 
+
+- name: Testing playbook 
+  hosts: all 
+  become: true 
+  tasks: 
+  -  name: pring some text  
+     debug: 
+       msg: "Hey from first playbook"
