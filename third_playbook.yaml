@@ -13,7 +13,7 @@
       
     - name: create new file 
       file: 
-        path: .
+        path: /home
         state: touch
         mode: 755
 #     - name: installing Apache2
